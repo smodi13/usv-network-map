@@ -1,0 +1,553 @@
+{
+  "companies": [
+    {
+      "id": "twitter",
+      "name": "Twitter",
+      "sector": "Social",
+      "fundingM": 1820,
+      "founded": 2006,
+      "status": "acquired",
+      "description": "Microblogging and social networking platform that redefined real-time public conversation at global scale.",
+      "founders": [
+        { "name": "Jack Dorsey", "role": "Co-founder", "priorCompany": "Odeo", "university": "Missouri S&T" },
+        { "name": "Biz Stone", "role": "Co-founder", "priorCompany": "Google, Odeo", "university": "UMass Amherst" },
+        { "name": "Evan Williams", "role": "Co-founder", "priorCompany": "Google, Odeo", "university": "Nebraska (no degree)" }
+      ]
+    },
+    {
+      "id": "tumblr",
+      "name": "Tumblr",
+      "sector": "Social",
+      "fundingM": 125,
+      "founded": 2007,
+      "status": "acquired",
+      "description": "Microblogging and social platform that cultivated a passionate creative community of millions.",
+      "founders": [
+        { "name": "David Karp", "role": "Founder", "priorCompany": "UrbanBaby", "university": "No college (homeschooled)" }
+      ]
+    },
+    {
+      "id": "foursquare",
+      "name": "Foursquare",
+      "sector": "Social",
+      "fundingM": 166,
+      "founded": 2009,
+      "status": "active",
+      "description": "Location intelligence platform that pioneered social check-ins and built the world's most accurate location data layer.",
+      "founders": [
+        { "name": "Dennis Crowley", "role": "Co-founder", "priorCompany": "Jupiter Research", "university": "NYU (ITP)" },
+        { "name": "Naveen Selvadurai", "role": "Co-founder", "priorCompany": "Yahoo", "university": "Worcester Polytechnic Institute" }
+      ]
+    },
+    {
+      "id": "meetup",
+      "name": "Meetup",
+      "sector": "Social",
+      "fundingM": 18,
+      "founded": 2002,
+      "status": "active",
+      "description": "Platform for organizing and joining local communities and interest-based groups around the world.",
+      "founders": [
+        { "name": "Scott Heiferman", "role": "Co-founder", "priorCompany": "iOwn.com, Sony", "university": "University of Iowa" }
+      ]
+    },
+    {
+      "id": "disqus",
+      "name": "Disqus",
+      "sector": "Social",
+      "fundingM": 16,
+      "founded": 2007,
+      "status": "acquired",
+      "description": "Networked community platform that powers comments and discussions across millions of websites.",
+      "founders": [
+        { "name": "Daniel Ha", "role": "Co-founder", "priorCompany": "None", "university": "UC Davis" },
+        { "name": "Jason Yan", "role": "Co-founder", "priorCompany": "None", "university": "UC Davis" }
+      ]
+    },
+    {
+      "id": "kik",
+      "name": "Kik",
+      "sector": "Social",
+      "fundingM": 120,
+      "founded": 2009,
+      "status": "acquired",
+      "description": "Mobile messaging app that built one of the largest youth messaging networks in North America.",
+      "founders": [
+        { "name": "Ted Livingston", "role": "Founder", "priorCompany": "BlackBerry", "university": "University of Waterloo" }
+      ]
+    },
+    {
+      "id": "okcupid",
+      "name": "OkCupid",
+      "sector": "Social",
+      "fundingM": 6,
+      "founded": 2004,
+      "status": "acquired",
+      "description": "Data-driven online dating platform that used personality matching algorithms to connect millions.",
+      "founders": [
+        { "name": "Sam Yagan", "role": "Co-founder", "priorCompany": "SparkNetworks", "university": "Harvard University" },
+        { "name": "Chris Coyne", "role": "Co-founder", "priorCompany": "SparkNetworks", "university": "Harvard University" },
+        { "name": "Max Krohn", "role": "Co-founder", "priorCompany": "SparkNetworks", "university": "Harvard University" },
+        { "name": "Christian Rudder", "role": "Co-founder", "priorCompany": "None", "university": "Harvard University" }
+      ]
+    },
+    {
+      "id": "hinge",
+      "name": "Hinge",
+      "sector": "Social",
+      "fundingM": 27,
+      "founded": 2012,
+      "status": "acquired",
+      "description": "Relationship-focused dating app designed to be deleted, now owned by Match Group.",
+      "founders": [
+        { "name": "Justin McLeod", "role": "Founder", "priorCompany": "McKinsey", "university": "Harvard Business School" }
+      ]
+    },
+    {
+      "id": "etsy",
+      "name": "Etsy",
+      "sector": "Marketplace",
+      "fundingM": 97,
+      "founded": 2005,
+      "status": "public",
+      "description": "Global two-sided marketplace for handmade and vintage goods connecting millions of artisan sellers and buyers.",
+      "founders": [
+        { "name": "Rob Kalin", "role": "Co-founder", "priorCompany": "None", "university": "NYU (ITP)" },
+        { "name": "Chris Maguire", "role": "Co-founder", "priorCompany": "None", "university": "NYU" },
+        { "name": "Haim Schoppik", "role": "Co-founder", "priorCompany": "None", "university": "NYU" }
+      ]
+    },
+    {
+      "id": "gilt",
+      "name": "Gilt Groupe",
+      "sector": "Marketplace",
+      "fundingM": 236,
+      "founded": 2007,
+      "status": "acquired",
+      "description": "Luxury flash-sale marketplace that pioneered the invite-only, time-limited commerce model in the US.",
+      "founders": [
+        { "name": "Alexandra Wilkis Wilson", "role": "Co-founder", "priorCompany": "Bulgari, Louis Vuitton", "university": "Harvard University" },
+        { "name": "Alexis Maybank", "role": "Co-founder", "priorCompany": "eBay, AOL", "university": "Harvard University" }
+      ]
+    },
+    {
+      "id": "behance",
+      "name": "Behance",
+      "sector": "Marketplace",
+      "fundingM": 7,
+      "founded": 2006,
+      "status": "acquired",
+      "description": "Creative portfolio platform and marketplace connecting designers, illustrators, and artists worldwide.",
+      "founders": [
+        { "name": "Scott Belsky", "role": "Co-founder", "priorCompany": "Goldman Sachs", "university": "Cornell University" },
+        { "name": "Matias Corea", "role": "Co-founder", "priorCompany": "None", "university": "Escola Massana, Barcelona" }
+      ]
+    },
+    {
+      "id": "kickstarter",
+      "name": "Kickstarter",
+      "sector": "Marketplace",
+      "fundingM": 10,
+      "founded": 2009,
+      "status": "active",
+      "description": "Crowdfunding platform that has helped over 230,000 creative projects get funded by their communities.",
+      "founders": [
+        { "name": "Perry Chen", "role": "Co-founder", "priorCompany": "None", "university": "Tulane University" },
+        { "name": "Yancey Strickler", "role": "Co-founder", "priorCompany": "eMusic", "university": "University of Virginia" },
+        { "name": "Charles Adler", "role": "Co-founder", "priorCompany": "None", "university": "SAIC (School of Art Institute of Chicago)" }
+      ]
+    },
+    {
+      "id": "handshake",
+      "name": "Handshake",
+      "sector": "Marketplace",
+      "fundingM": 219,
+      "founded": 2014,
+      "status": "active",
+      "description": "Early talent recruitment marketplace connecting college students with employers across the United States.",
+      "founders": [
+        { "name": "Garrett Lord", "role": "Co-founder", "priorCompany": "None", "university": "University of Michigan" },
+        { "name": "Ben Christensen", "role": "Co-founder", "priorCompany": "None", "university": "University of Michigan" },
+        { "name": "Scott Ringwelski", "role": "Co-founder", "priorCompany": "None", "university": "University of Michigan" }
+      ]
+    },
+    {
+      "id": "opensea",
+      "name": "OpenSea",
+      "sector": "Marketplace",
+      "fundingM": 423,
+      "founded": 2017,
+      "status": "active",
+      "description": "The largest NFT marketplace, enabling peer-to-peer buying, selling, and discovery of digital assets.",
+      "founders": [
+        { "name": "Devin Finzer", "role": "Co-founder", "priorCompany": "Pinterest, Claimdog", "university": "Brown University" },
+        { "name": "Alex Atallah", "role": "Co-founder", "priorCompany": "Palantir", "university": "Stanford University" }
+      ]
+    },
+    {
+      "id": "lending-club",
+      "name": "Lending Club",
+      "sector": "Fintech",
+      "fundingM": 392,
+      "founded": 2006,
+      "status": "public",
+      "description": "Pioneered peer-to-peer consumer lending, replacing the bank intermediary with a networked marketplace.",
+      "founders": [
+        { "name": "Renaud Laplanche", "role": "Founder", "priorCompany": "TripleHop Technologies", "university": "ESCP Europe" }
+      ]
+    },
+    {
+      "id": "coinbase",
+      "name": "Coinbase",
+      "sector": "Fintech",
+      "fundingM": 547,
+      "founded": 2012,
+      "status": "public",
+      "description": "The leading regulated cryptocurrency exchange that onboarded millions of Americans into digital assets.",
+      "founders": [
+        { "name": "Brian Armstrong", "role": "Co-founder", "priorCompany": "Airbnb", "university": "Rice University" },
+        { "name": "Fred Ehrsam", "role": "Co-founder", "priorCompany": "Goldman Sachs", "university": "Duke University" }
+      ]
+    },
+    {
+      "id": "venmo",
+      "name": "Venmo",
+      "sector": "Fintech",
+      "fundingM": 2,
+      "founded": 2009,
+      "status": "acquired",
+      "description": "Social payments app that turned money transfers into a shared social feed, acquired by PayPal.",
+      "founders": [
+        { "name": "Andrew Kortina", "role": "Co-founder", "priorCompany": "None", "university": "University of Pennsylvania" },
+        { "name": "Iqram Magdon-Ismail", "role": "Co-founder", "priorCompany": "None", "university": "University of Pennsylvania" }
+      ]
+    },
+    {
+      "id": "dwolla",
+      "name": "Dwolla",
+      "sector": "Fintech",
+      "fundingM": 42,
+      "founded": 2008,
+      "status": "active",
+      "description": "Real-time ACH payment network built to move money faster and more cheaply than legacy rails.",
+      "founders": [
+        { "name": "Ben Milne", "role": "Founder", "priorCompany": "Elemental Design", "university": "No college" }
+      ]
+    },
+    {
+      "id": "remitly",
+      "name": "Remitly",
+      "sector": "Fintech",
+      "fundingM": 495,
+      "founded": 2011,
+      "status": "public",
+      "description": "Digital remittance platform helping immigrants send money home faster and at lower cost than legacy services.",
+      "founders": [
+        { "name": "Matt Oppenheimer", "role": "Co-founder", "priorCompany": "Barclays, Amazon", "university": "Harvard University" },
+        { "name": "Josh Hug", "role": "Co-founder", "priorCompany": "Microsoft", "university": "Princeton University" },
+        { "name": "Shivaas Gulati", "role": "Co-founder", "priorCompany": "Google", "university": "Stanford University" }
+      ]
+    },
+    {
+      "id": "carta",
+      "name": "Carta",
+      "sector": "Fintech",
+      "fundingM": 626,
+      "founded": 2012,
+      "status": "active",
+      "description": "Equity management platform digitizing cap tables and enabling the private market to operate like public markets.",
+      "founders": [
+        { "name": "Henry Ward", "role": "Co-founder", "priorCompany": "Secondmarket", "university": "Brigham Young University" },
+        { "name": "Manu Kumar", "role": "Co-founder", "priorCompany": "Pitchbook", "university": "Carnegie Mellon University" }
+      ]
+    },
+    {
+      "id": "pipe",
+      "name": "Pipe",
+      "sector": "Fintech",
+      "fundingM": 316,
+      "founded": 2019,
+      "status": "active",
+      "description": "Revenue-based financing platform that turns recurring revenue into upfront capital for SaaS companies.",
+      "founders": [
+        { "name": "Harry Hurst", "role": "Co-founder", "priorCompany": "Skurt", "university": "University of Bristol" },
+        { "name": "Luke Voiles", "role": "Co-founder", "priorCompany": "Square", "university": "University of Mississippi" },
+        { "name": "Zain Allarakhia", "role": "Co-founder", "priorCompany": "Skurt", "university": "University of San Francisco" }
+      ]
+    },
+    {
+      "id": "albert",
+      "name": "Albert",
+      "sector": "Fintech",
+      "fundingM": 100,
+      "founded": 2015,
+      "status": "active",
+      "description": "Consumer finance app combining automated savings, investing, and budgeting in a single platform.",
+      "founders": [
+        { "name": "Yinon Ravid", "role": "Co-founder", "priorCompany": "Rubicon Project", "university": "Technion (Israel)" },
+        { "name": "Jake Fuentes", "role": "Co-founder", "priorCompany": "McKinsey", "university": "Northwestern University" }
+      ]
+    },
+    {
+      "id": "republic",
+      "name": "Republic",
+      "sector": "Fintech",
+      "fundingM": 36,
+      "founded": 2016,
+      "status": "active",
+      "description": "Investment crowdfunding platform democratizing access to private market deals for retail investors.",
+      "founders": [
+        { "name": "Kendrick Nguyen", "role": "Co-founder", "priorCompany": "AngelList", "university": "Stanford Law School" },
+        { "name": "Jamison Hill", "role": "Co-founder", "priorCompany": "AngelList", "university": "Stanford University" }
+      ]
+    },
+    {
+      "id": "compound",
+      "name": "Compound Finance",
+      "sector": "Fintech",
+      "fundingM": 25,
+      "founded": 2018,
+      "status": "active",
+      "description": "Algorithmic money market protocol on Ethereum enabling permissionless borrowing and lending of crypto assets.",
+      "founders": [
+        { "name": "Robert Leshner", "role": "Co-founder", "priorCompany": "Postmates, Safe Shepherd", "university": "University of Pennsylvania" },
+        { "name": "Geoffrey Hayes", "role": "Co-founder", "priorCompany": "Postmates", "university": "University of California San Diego" }
+      ]
+    },
+    {
+      "id": "numerai",
+      "name": "Numerai",
+      "sector": "Fintech",
+      "fundingM": 8,
+      "founded": 2015,
+      "status": "active",
+      "description": "AI-powered hedge fund that crowdsources predictions from data scientists using encrypted financial data.",
+      "founders": [
+        { "name": "Richard Craib", "role": "Founder", "priorCompany": "Artivest", "university": "Cornell University" }
+      ]
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "sector": "Infrastructure",
+      "fundingM": 311,
+      "founded": 2007,
+      "status": "public",
+      "description": "Document-oriented NoSQL database that became the foundational data layer for a generation of modern applications.",
+      "founders": [
+        { "name": "Dwight Merriman", "role": "Co-founder", "priorCompany": "DoubleClick", "university": "Duke University" },
+        { "name": "Eliot Horowitz", "role": "Co-founder", "priorCompany": "DoubleClick", "university": "Brown University" },
+        { "name": "Kevin Ryan", "role": "Co-founder", "priorCompany": "DoubleClick", "university": "Yale University" }
+      ]
+    },
+    {
+      "id": "twilio",
+      "name": "Twilio",
+      "sector": "Infrastructure",
+      "fundingM": 250,
+      "founded": 2008,
+      "status": "public",
+      "description": "Cloud communications platform providing APIs for SMS, voice, and messaging that powers developer-built products.",
+      "founders": [
+        { "name": "Jeff Lawson", "role": "Co-founder", "priorCompany": "Amazon, StubHub", "university": "University of Michigan" },
+        { "name": "Evan Cooke", "role": "Co-founder", "priorCompany": "Amazon", "university": "University of Michigan" },
+        { "name": "John Wolthuis", "role": "Co-founder", "priorCompany": "Switchfly", "university": "University of Utah" }
+      ]
+    },
+    {
+      "id": "digitalocean",
+      "name": "DigitalOcean",
+      "sector": "Infrastructure",
+      "fundingM": 323,
+      "founded": 2011,
+      "status": "public",
+      "description": "Cloud platform designed for developers and startups, making server infrastructure simple and affordable.",
+      "founders": [
+        { "name": "Ben Uretsky", "role": "Co-founder", "priorCompany": "ServerAxis", "university": "SUNY Binghamton" },
+        { "name": "Moisey Uretsky", "role": "Co-founder", "priorCompany": "ServerAxis", "university": "SUNY Binghamton" },
+        { "name": "Alec Hartman", "role": "Co-founder", "priorCompany": "ServerAxis", "university": "James Madison University" }
+      ]
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "sector": "Infrastructure",
+      "fundingM": 332,
+      "founded": 2009,
+      "status": "public",
+      "description": "Global network platform securing and accelerating internet applications, protecting millions of websites.",
+      "founders": [
+        { "name": "Matthew Prince", "role": "Co-founder", "priorCompany": "Unspam Technologies", "university": "Harvard Business School" },
+        { "name": "Michelle Zatlyn", "role": "Co-founder", "priorCompany": "Google", "university": "McGill University" },
+        { "name": "Lee Holloway", "role": "Co-founder", "priorCompany": "Unspam Technologies", "university": "University of Nevada" }
+      ]
+    },
+    {
+      "id": "livepeer",
+      "name": "Livepeer",
+      "sector": "Infrastructure",
+      "fundingM": 8,
+      "founded": 2017,
+      "status": "active",
+      "description": "Decentralized video transcoding network reducing live streaming costs by 10x using idle GPU capacity.",
+      "founders": [
+        { "name": "Doug Petkanics", "role": "Co-founder", "priorCompany": "Wildcard", "university": "University of Pennsylvania" },
+        { "name": "Eric Tang", "role": "Co-founder", "priorCompany": "Wildcard", "university": "University of Pennsylvania" }
+      ]
+    },
+    {
+      "id": "protocol-labs",
+      "name": "Protocol Labs",
+      "sector": "Infrastructure",
+      "fundingM": 10,
+      "founded": 2014,
+      "status": "active",
+      "description": "Open-source research and development company building protocols for the decentralized web, including IPFS and Filecoin.",
+      "founders": [
+        { "name": "Juan Benet", "role": "Founder", "priorCompany": "Loki Studios", "university": "Stanford University" }
+      ]
+    },
+    {
+      "id": "dune",
+      "name": "Dune Analytics",
+      "sector": "Infrastructure",
+      "fundingM": 69,
+      "founded": 2018,
+      "status": "active",
+      "description": "Community-powered blockchain analytics platform making on-chain data queryable and shareable by anyone.",
+      "founders": [
+        { "name": "Fredrik Haga", "role": "Co-founder", "priorCompany": "SpareBank", "university": "BI Norwegian Business School" },
+        { "name": "Mats Olsen", "role": "Co-founder", "priorCompany": "Capgemini", "university": "BI Norwegian Business School" }
+      ]
+    },
+    {
+      "id": "crowdflower",
+      "name": "CrowdFlower",
+      "sector": "Infrastructure",
+      "fundingM": 38,
+      "founded": 2007,
+      "status": "acquired",
+      "description": "AI training data platform that crowdsourced human-in-the-loop data labeling for machine learning models.",
+      "founders": [
+        { "name": "Lukas Biewald", "role": "Co-founder", "priorCompany": "Powerset", "university": "Stanford University" },
+        { "name": "Chris Van Pelt", "role": "Co-founder", "priorCompany": "Powerset", "university": "UC Santa Barbara" }
+      ]
+    },
+    {
+      "id": "clearbit",
+      "name": "Clearbit",
+      "sector": "Infrastructure",
+      "fundingM": 18,
+      "founded": 2014,
+      "status": "acquired",
+      "description": "B2B data enrichment platform helping revenue teams understand who is visiting their site and in their CRM.",
+      "founders": [
+        { "name": "Alex MacCaw", "role": "Founder", "priorCompany": "Stripe", "university": "Self-taught (no degree)" }
+      ]
+    },
+    {
+      "id": "polygon",
+      "name": "Polygon",
+      "sector": "Infrastructure",
+      "fundingM": 450,
+      "founded": 2017,
+      "status": "active",
+      "description": "Ethereum scaling platform providing faster and cheaper transactions as a layer-2 solution.",
+      "founders": [
+        { "name": "Jayant Kanani", "role": "Co-founder", "priorCompany": "Decentral Games", "university": "Gujarat Technological University" },
+        { "name": "Sandeep Nailwal", "role": "Co-founder", "priorCompany": "Welspun", "university": "IIIT Surat" },
+        { "name": "Anurag Arjun", "role": "Co-founder", "priorCompany": "Welspun", "university": "NIT Surat" }
+      ]
+    },
+    {
+      "id": "duolingo",
+      "name": "Duolingo",
+      "sector": "Consumer",
+      "fundingM": 183,
+      "founded": 2011,
+      "status": "public",
+      "description": "World's most downloaded education app using game mechanics to teach languages to 500 million learners.",
+      "founders": [
+        { "name": "Luis von Ahn", "role": "Co-founder", "priorCompany": "Carnegie Mellon (Professor)", "university": "Duke University" },
+        { "name": "Severin Hacker", "role": "Co-founder", "priorCompany": "None", "university": "ETH Zurich" }
+      ]
+    },
+    {
+      "id": "soundcloud",
+      "name": "SoundCloud",
+      "sector": "Consumer",
+      "fundingM": 192,
+      "founded": 2007,
+      "status": "active",
+      "description": "Audio distribution platform and music community where creators upload and share original content.",
+      "founders": [
+        { "name": "Alexander Ljung", "role": "Co-founder", "priorCompany": "None", "university": "Royal Institute of Technology (Stockholm)" },
+        { "name": "Eric Wahlforss", "role": "Co-founder", "priorCompany": "None", "university": "Royal Institute of Technology (Stockholm)" }
+      ]
+    },
+    {
+      "id": "wattpad",
+      "name": "Wattpad",
+      "sector": "Consumer",
+      "fundingM": 117,
+      "founded": 2006,
+      "status": "acquired",
+      "description": "Social storytelling platform where 90 million readers and writers share original stories across genres.",
+      "founders": [
+        { "name": "Allen Lau", "role": "Co-founder", "priorCompany": "Tira Wireless", "university": "University of Waterloo" },
+        { "name": "Ivan Yuen", "role": "Co-founder", "priorCompany": "None", "university": "University of Waterloo" }
+      ]
+    },
+    {
+      "id": "stackoverflow",
+      "name": "Stack Overflow",
+      "sector": "Consumer",
+      "fundingM": 18,
+      "founded": 2009,
+      "status": "acquired",
+      "description": "Developer community and Q&A platform that became the central knowledge network for the global software industry.",
+      "founders": [
+        { "name": "Joel Spolsky", "role": "Co-founder", "priorCompany": "Microsoft, Fog Creek", "university": "Yale University" },
+        { "name": "Jeff Atwood", "role": "Co-founder", "priorCompany": "None", "university": "UC Berkeley" }
+      ]
+    },
+    {
+      "id": "zynga",
+      "name": "Zynga",
+      "sector": "Consumer",
+      "fundingM": 520,
+      "founded": 2007,
+      "status": "public",
+      "description": "Social gaming company that built FarmVille and Words with Friends, defining casual mobile gaming.",
+      "founders": [
+        { "name": "Mark Pincus", "role": "Founder", "priorCompany": "Support.com, Tribe Networks", "university": "Harvard Business School" }
+      ]
+    },
+    {
+      "id": "dapper-labs",
+      "name": "Dapper Labs",
+      "sector": "Consumer",
+      "fundingM": 300,
+      "founded": 2018,
+      "status": "active",
+      "description": "Consumer blockchain company behind CryptoKitties and NBA Top Shot, making digital ownership fun.",
+      "founders": [
+        { "name": "Roham Gharegozlou", "role": "Co-founder", "priorCompany": "Axiom Zen", "university": "Stanford University" },
+        { "name": "Dieter Shirley", "role": "Co-founder", "priorCompany": "Axiom Zen", "university": "University of Victoria" }
+      ]
+    },
+    {
+      "id": "flatiron",
+      "name": "Flatiron Health",
+      "sector": "Healthcare",
+      "fundingM": 175,
+      "founded": 2012,
+      "status": "acquired",
+      "description": "Oncology data platform organizing real-world cancer data to accelerate cancer research and improve patient care.",
+      "founders": [
+        { "name": "Nat Turner", "role": "Co-founder", "priorCompany": "DoubleClick, Google", "university": "University of Pennsylvania" },
+        { "name": "Zach Weinberg", "role": "Co-founder", "priorCompany": "DoubleClick, Google", "university": "University of Pennsylvania" }
+      ]
+    }
+  ]
+}
