@@ -26,8 +26,8 @@ const NetworkGraph = dynamic(() => import("../components/NetworkGraph"), {
 const NAV_LINKS = [
   { id: "graph", label: "Network Map" },
   { id: "founders", label: "Founders" },
-  { id: "about", label: "About" },
   { id: "pitches", label: "Pitches" },
+  { id: "about", label: "About" },
 ];
 
 const STATS = [
@@ -341,19 +341,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 3: About */}
-      <section id="about" ref={aboutSectionRef} className="px-4 md:px-8 mb-20">
-        <div className="section-header mb-6">
-          <p className="text-[11px] uppercase tracking-widest text-[#C9A84C] mb-1">Section 03</p>
-          <h2 className="text-2xl font-bold text-white">About This Project</h2>
-        </div>
-        <AboutSection />
-      </section>
-
-      {/* Section 4: Investment Pitches */}
-      <section id="pitches" ref={pitchesSectionRef} className="px-4 md:px-8 pb-28">
+      {/* Section 3: Investment Pitches */}
+      <section id="pitches" ref={pitchesSectionRef} className="px-4 md:px-8 mb-20">
         <div className="section-header mb-3">
-          <p className="text-[11px] uppercase tracking-widest text-[#C9A84C] mb-1">Section 04</p>
+          <p className="text-[11px] uppercase tracking-widest text-[#C9A84C] mb-1">Section 03</p>
           <h2 className="text-2xl font-bold text-white">Investment Pitches</h2>
           <p className="text-gray-400 text-sm mt-1 max-w-2xl leading-relaxed">
             Four original investment memos on companies USV has not yet backed that fit the thesis of trusted networks broadening access to knowledge, capital, or well-being. Each memo argues the network effects case, the why now, and a recommendation. Click any card to expand the full memo.
@@ -370,6 +361,15 @@ export default function Home() {
         </div>
 
         <InvestmentPitches />
+      </section>
+
+      {/* Section 4: About */}
+      <section id="about" ref={aboutSectionRef} className="px-4 md:px-8 pb-28">
+        <div className="section-header mb-6">
+          <p className="text-[11px] uppercase tracking-widest text-[#C9A84C] mb-1">Section 04</p>
+          <h2 className="text-2xl font-bold text-white">About This Project</h2>
+        </div>
+        <AboutSection />
       </section>
 
       <footer className="border-t border-white/10 px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
