@@ -1,7 +1,11 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const points = [
   {
@@ -23,44 +27,124 @@ const points = [
 ];
 
 export default function AboutSection() {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const headingRef = useRef<HTMLDivElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Heading reveal
+      if (headingRef.current) {
+        gsap.set(headingRef.current, { opacity: 0, y: 28 });
+        gsap.to(headingRef.current, {
+          opacity: 1,
+          y: 0,
+          duration: 0.75,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: headingRef.current,
+            start: "top 86%",
+            toggleActions: "play none none none",
+          },
+        });
+      }
+
+      // Staggered card reveals + inner-content parallax
+      if (gridRef.current) {
+        const cards = gridRef.current.querySelectorAll<HTMLElement>(".about-card");
+
+        cards.forEach((card, i) => {
+          const inner = card.querySelector<HTMLElement>(".card-inner");
+
+          // Staggered slide-up reveal
+          gsap.set(card, { opacity: 0, y: 36 });
+          gsap.to(card, {
+            opacity: 1,
+            y: 0,
+            duration: 0.65,
+            ease: "power2.out",
+            delay: i * 0.1,
+            scrollTrigger: {
+              trigger: card,
+              start: "top 88%",
+              toggleActions: "play none none none",
+            },
+          });
+
+          // Subtle parallax on the inner content as card scrolls through viewport
+          if (inner) {
+            gsap.fromTo(
+              inner,
+              { y: 14 },
+              {
+                y: -14,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: card,
+                  start: "top bottom",
+                  end: "bottom top",
+                  scrub: 0.7,
+                },
+              }
+            );
+          }
+        });
+      }
+
+      // Contact card reveal
+      if (contactRef.current) {
+        gsap.set(contactRef.current, { opacity: 0, y: 30 });
+        gsap.to(contactRef.current, {
+          opacity: 1,
+          y: 0,
+          duration: 0.72,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: contactRef.current,
+            start: "top 88%",
+            toggleActions: "play none none none",
+          },
+        });
+      }
+    }, wrapperRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <div ref={ref} className="max-w-4xl mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="mb-10"
-      >
+    <div ref={wrapperRef} className="max-w-4xl mx-auto">
+
+      {/* Heading */}
+      <div ref={headingRef} className="mb-10">
         <p className="text-[11px] uppercase tracking-widest text-[#C9A84C] mb-3">About this project</p>
         <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
           Built to understand USV<br />
           <span className="text-gray-400 font-normal">before applying to USV.</span>
         </h2>
-      </motion.div>
+      </div>
 
-      <div className="grid md:grid-cols-2 gap-5 mb-12">
-        {points.map((p, i) => (
-          <motion.div
+      {/* Point cards with inner parallax */}
+      <div ref={gridRef} className="grid md:grid-cols-2 gap-5 mb-12">
+        {points.map((p) => (
+          <div
             key={p.title}
-            initial={{ opacity: 0, y: 24 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.55, delay: 0.1 + i * 0.1, ease: "easeOut" }}
-            className="rounded-xl border border-white/10 p-6"
+            className="about-card rounded-xl border border-white/10 overflow-hidden"
             style={{ background: "#162035" }}
           >
-            <h3 className="text-[#C9A84C] font-semibold text-sm mb-3 uppercase tracking-wide">{p.title}</h3>
-            <p className="text-gray-300 text-sm leading-relaxed">{p.body}</p>
-          </motion.div>
+            <div className="card-inner p-6" style={{ willChange: "transform" }}>
+              <h3 className="text-[#C9A84C] font-semibold text-sm mb-3 uppercase tracking-wide">{p.title}</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">{p.body}</p>
+            </div>
+          </div>
         ))}
       </div>
 
+      {/* Contact card — Framer Motion hover only */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.55, delay: 0.55, ease: "easeOut" }}
+        ref={contactRef}
+        whileHover={{ boxShadow: "0 0 40px rgba(201,168,76,0.08)" }}
+        transition={{ duration: 0.3 }}
         className="rounded-xl border border-[#C9A84C]/30 p-8"
         style={{ background: "#162035" }}
       >
@@ -73,20 +157,24 @@ export default function AboutSection() {
             </p>
           </div>
           <div className="flex flex-col gap-3 md:items-end">
-            <a
+            <motion.a
               href="mailto:modi.sahil@gmail.com"
-              className="flex items-center gap-2 text-sm text-gray-300 hover:text-[#C9A84C] transition-colors group"
+              whileHover={{ x: -3, color: "#C9A84C" }}
+              transition={{ type: "spring", stiffness: 380, damping: 22 }}
+              className="flex items-center gap-2 text-sm text-gray-300 group"
             >
               <span className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-xs group-hover:border-[#C9A84C]/40 transition-colors">@</span>
               modi.sahil@gmail.com
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="tel:+16025357223"
-              className="flex items-center gap-2 text-sm text-gray-300 hover:text-[#C9A84C] transition-colors group"
+              whileHover={{ x: -3, color: "#C9A84C" }}
+              transition={{ type: "spring", stiffness: 380, damping: 22 }}
+              className="flex items-center gap-2 text-sm text-gray-300 group"
             >
               <span className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-xs group-hover:border-[#C9A84C]/40 transition-colors">#</span>
               (602) 535-7223
-            </a>
+            </motion.a>
           </div>
         </div>
 

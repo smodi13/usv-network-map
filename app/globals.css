@@ -49,3 +49,31 @@ body {
 .hover\:bg-white\/3:hover {
   background: rgba(255, 255, 255, 0.03);
 }
+
+/* Nav: transparent at top, frosted glass after scrolling past hero */
+#main-nav {
+  background: transparent;
+  border-bottom-color: transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    backdrop-filter 0.4s ease,
+    -webkit-backdrop-filter 0.4s ease;
+}
+
+#main-nav[data-scrolled] {
+  background: rgba(11, 20, 38, 0.94) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+}
+
+/* Section reveal initial states set by GSAP, but ensure no flash */
+.gsap-reveal {
+  visibility: hidden;
+}
+.gsap-reveal.is-visible {
+  visibility: visible;
+}

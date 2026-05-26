@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { useMemo, useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import portfolioData from "../data/portfolio.json";
 
 interface Founder {
@@ -93,11 +93,57 @@ const SECTOR_COLORS: Record<string, string> = {
   Healthcare: "#14B8A6",
 };
 
+const ROW_VARIANTS = {
+  hidden: { opacity: 0, y: 16 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: Math.min(i * 0.028, 0.55),
+      duration: 0.42,
+      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
+    },
+  }),
+};
+
 export default function FounderTable() {
   const [sortKey, setSortKey] = useState<SortKey>("connectionScore");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
   const [uniFilter, setUniFilter] = useState("");
   const [employerFilter, setEmployerFilter] = useState("");
+
+  // Viewport gate + re-stagger trigger
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const [animKey, setAnimKey] = useState(0);
+  const [inView, setInView] = useState(false);
+  const filterStateRef = useRef(`${uniFilter}-${employerFilter}-${sortKey}-${sortDir}`);
+
+  // Watch for section entering viewport (fires only once)
+  useEffect(() => {
+    const el = wrapperRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          setAnimKey((k) => k + 1);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.06 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  // Re-stagger whenever filter/sort changes (only after first in-view)
+  const filterState = `${uniFilter}-${employerFilter}-${sortKey}-${sortDir}`;
+  useEffect(() => {
+    if (inView && filterStateRef.current !== filterState) {
+      filterStateRef.current = filterState;
+      setAnimKey((k) => k + 1);
+    }
+  }, [filterState, inView]);
 
   const companies = portfolioData.companies as Company[];
 
@@ -195,15 +241,19 @@ export default function FounderTable() {
     "bg-[#0B1426] border border-white/10 text-gray-300 text-sm rounded-lg px-3 py-2 focus:outline-none focus:border-[#C9A84C]/50 transition-colors";
 
   return (
-    <div>
-      <div className="flex flex-wrap gap-3 mb-6">
+    <div ref={wrapperRef}>
+      {/* Filters */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="flex flex-wrap gap-3 mb-6"
+      >
         <div className="flex flex-col gap-1">
           <label className="text-[10px] uppercase tracking-widest text-gray-500">Filter by University</label>
           <select className={selectClass} value={uniFilter} onChange={(e) => setUniFilter(e.target.value)}>
             {universities.map((u) => (
-              <option key={u} value={u}>
-                {u || "All Universities"}
-              </option>
+              <option key={u} value={u}>{u || "All Universities"}</option>
             ))}
           </select>
         </div>
@@ -211,9 +261,7 @@ export default function FounderTable() {
           <label className="text-[10px] uppercase tracking-widest text-gray-500">Filter by Prior Employer</label>
           <select className={selectClass} value={employerFilter} onChange={(e) => setEmployerFilter(e.target.value)}>
             {employers.map((e) => (
-              <option key={e} value={e}>
-                {e || "All Employers"}
-              </option>
+              <option key={e} value={e}>{e || "All Employers"}</option>
             ))}
           </select>
         </div>
@@ -228,12 +276,22 @@ export default function FounderTable() {
           </div>
         )}
         <div className="ml-auto flex flex-col justify-end">
-          <span className="text-sm text-gray-500 pb-2">
-            {sorted.length} founder{sorted.length !== 1 ? "s" : ""}
-          </span>
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={sorted.length}
+              initial={{ opacity: 0, y: -6 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 6 }}
+              transition={{ duration: 0.2 }}
+              className="text-sm text-gray-500 pb-2"
+            >
+              {sorted.length} founder{sorted.length !== 1 ? "s" : ""}
+            </motion.span>
+          </AnimatePresence>
         </div>
-      </div>
+      </motion.div>
 
+      {/* Table */}
       <div className="overflow-x-auto rounded-xl border border-white/10">
         <table className="w-full text-sm">
           <thead>
@@ -261,14 +319,17 @@ export default function FounderTable() {
               ))}
             </tr>
           </thead>
-          <tbody>
+
+          {/* Key on tbody forces full remount on each filter/sort change, re-triggering stagger */}
+          <tbody key={animKey}>
             {sorted.map((row, i) => (
               <motion.tr
                 key={`${row.name}-${row.company}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: Math.min(i * 0.015, 0.4) }}
-                className="border-t border-white/5 hover:bg-white/3 transition-colors"
+                custom={i}
+                variants={ROW_VARIANTS}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                className="border-t border-white/5 hover:bg-white/[0.03] transition-colors"
                 style={{ background: i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.015)" }}
               >
                 <td className="px-4 py-3 font-medium text-white whitespace-nowrap">{row.name}</td>
@@ -289,12 +350,12 @@ export default function FounderTable() {
                 <td className="px-4 py-3">
                   <div className="flex items-center gap-2">
                     <div className="flex-1 max-w-[60px] bg-white/10 rounded-full h-1.5 overflow-hidden">
-                      <div
+                      <motion.div
                         className="h-full rounded-full"
-                        style={{
-                          width: `${Math.min(100, (row.connectionScore / 8) * 100)}%`,
-                          background: "#C9A84C",
-                        }}
+                        initial={{ width: 0 }}
+                        animate={inView ? { width: `${Math.min(100, (row.connectionScore / 8) * 100)}%` } : { width: 0 }}
+                        transition={{ delay: Math.min(i * 0.028, 0.55) + 0.25, duration: 0.5, ease: "easeOut" }}
+                        style={{ background: "#C9A84C" }}
                       />
                     </div>
                     <span className="text-[#C9A84C] font-semibold tabular-nums w-4 text-right">{row.connectionScore}</span>
