@@ -1,0 +1,104 @@
+{
+  "pitches": [
+    {
+      "id": "locket",
+      "company": "Locket",
+      "sector": "Intimate Social",
+      "sectorColor": "#E94057",
+      "thesis": "The purest expression of intimate network effects since WhatsApp. Zero algorithmic feed, zero follower counts, zero public content. Pure private graph.",
+      "stage": "Series A",
+      "raised": "$12.5M",
+      "recommendation": "Invest",
+      "recommendationRationale": "Locket's intimate network architecture is the USV thesis at its most distilled. It is early enough to lead or co-lead a Series B at a defensible price, and the product has achieved organic scale that most social apps spend hundreds of millions to manufacture.",
+      "investors": "Sam Altman, Mike Krieger, Costanoa Ventures",
+      "founded": 2022,
+      "founders": "Matt Moss",
+      "metrics": "91M lifetime installs",
+      "networkEffects": "Locket is a private graph of 5 to 20 people. Every user who joins increases the value of the network for the exact people who already use it, their closest friends. There is no broadcast mechanism, no follower count, no public feed. This means the network cannot be gamed, and it cannot be diluted by scale the way Instagram was when it shifted from friends to influencers. The intimacy is the product, and intimacy compounds as the graph fills in. WhatsApp built a $19B business on exactly this mechanic, private social with no algorithmic mediation. Locket is doing it for visual ambient presence, not messaging. The widget surface means Locket is literally always on, living on your home screen, updated by the people you care most about. That is a level of social engagement that no feed-based app has ever achieved.",
+      "whyNow": "The post-Instagram generation has watched parasocial relationships, engagement metrics, and algorithmic feeds hollow out the original social promise. Gen Z is actively retreating from public social. Downloads of close-friends apps, BeReal, Locket, Noplace, are accelerating while Instagram and TikTok lose daily time-spent among under-25s. The widget paradigm unlocked by iOS 14 in 2020 created a new home screen surface that did not exist before. Locket is the only app that has fully exploited this surface at scale, reaching 91M installs without paid acquisition. The timing is structural, not cyclical.",
+      "tam": "$25B",
+      "tamNote": "A conservative slice of the $230B global social media market addressable through intimate social monetization. Monetization paths include premium subscriptions, shared commerce between close friends, and memory products. The WhatsApp playbook suggests $3 to $5 per user per year is achievable for a private social utility with this level of daily engagement.",
+      "risks": [
+        "Platform dependency on Apple widget API, any change to iOS home screen paradigm is an existential risk",
+        "Monetization path is not yet proven at scale, and intimate social has historically been hard to commercialize",
+        "Copycat risk from Instagram and Snapchat, both of which have tried and failed to clone the close-friends mechanic"
+      ],
+      "riskMitigation": "The iOS platform risk is real but Apple has a financial incentive to keep the widget ecosystem vibrant as a competitive moat against Android. The monetization question is answered by the WhatsApp playbook. And Instagram has tried to copy the close-friends mechanic four times now and failed each time, because distribution and intimacy are inversely correlated at scale. A billion-user platform cannot manufacture the feeling of exclusivity that makes Locket work."
+    },
+    {
+      "id": "geneva",
+      "company": "Geneva",
+      "sector": "Community Infrastructure",
+      "sectorColor": "#8B5CF6",
+      "thesis": "Horizontal infrastructure for the community layer of the internet. The Twilio bet for organized online groups, picks and shovels for the community economy.",
+      "stage": "Series B",
+      "raised": "$35M",
+      "recommendation": "Invest",
+      "recommendationRationale": "Geneva is building the horizontal infrastructure layer for community that Slack built for work and Twilio built for communications. The TAM is large, the switching costs compound over time, and the product is demonstrably better than Discord for adult non-gaming communities.",
+      "investors": "Accel",
+      "founded": 2019,
+      "founders": "Cameron Sherrill, Jay Gerber",
+      "metrics": "10,000+ communities hosted",
+      "networkEffects": "Geneva exhibits two distinct compounding loops. Within each community, the platform gets stickier as members build shared channels, archives, and norms. A three-year-old Geneva community is vastly harder to migrate than a new one because all its institutional memory is on the platform. Across communities, Geneva benefits from discovery network effects: members who are active in one community discover others on the platform, a cross-pollination mechanic that Slack has in workspaces but Discord has never cracked at scale. Every community that migrates to Geneva makes the next migration easier through shared onboarding patterns and tooling conventions. This is the same compounding dynamic that made Slack the default for work and made Twilio the default for developer communications.",
+      "whyNow": "Discord grew to 550M registered users by targeting gamers, then stalled. Its product is optimized for anonymous, text-heavy, high-frequency interaction. The majority of real-world communities, alumni networks, professional associations, neighborhood organizations, interest clubs, activist groups, do not fit that mold. They need structured spaces, moderation tools, event management, and adult-grade governance features. Slack is too expensive and too work-branded. Facebook Groups are algorithmically polluted and trust-depleted. The community economy formalized post-pandemic, with creators and organizations investing seriously in owned audience infrastructure for the first time, and Geneva was ready.",
+      "tam": "$12B",
+      "tamNote": "Community software market projected at $18B by 2030 according to Grand View Research. Geneva's horizontal positioning means it competes across professional association software, non-work communication platforms, and creator community infrastructure. The total addressable market expands further if Geneva captures switching behavior from Facebook Groups, which hosts over 1.8B monthly active users in organized communities.",
+      "risks": [
+        "Discord is well-capitalized and could expand its product surface toward adult professional communities",
+        "Community migration costs are low until deep archive and governance lock-in develops",
+        "Monetization model not yet proven at scale, and community infrastructure has historically been hard to charge for"
+      ],
+      "riskMitigation": "Discord's brand is gaming and Gen Z anonymity. Adult professional communities actively avoid Discord for reputational reasons, the same way they avoid Reddit. The brand moat is stronger than it appears on paper. The monetization question is addressable through a community-pays SaaS model similar to Slack, where the community owner pays per seat or per active member. Geneva should focus on making community archives and institutional knowledge the primary lock-in mechanism."
+    },
+    {
+      "id": "cleo",
+      "company": "Cleo",
+      "sector": "AI Fintech",
+      "sectorColor": "#10B981",
+      "thesis": "Broadening access to financial guidance for the 60% of Americans who cannot afford a financial advisor, through an AI with genuine daily engagement.",
+      "stage": "Series C",
+      "raised": "$150M+",
+      "recommendation": "Invest",
+      "recommendationRationale": "Cleo has solved the engagement problem that has killed every previous personal finance app. Users enjoy using it daily, a behavior that is unprecedented in fintech, and the proprietary data flywheel this creates is a durable competitive moat that no bank or robo-advisor can replicate quickly.",
+      "investors": "Balderton Capital, EQT Ventures, LocalGlobe",
+      "founded": 2016,
+      "founders": "Barney Hussey-Yeo",
+      "metrics": "7M+ active users, primarily Gen Z and millennials",
+      "networkEffects": "Cleo's moat is not viral network effects but data network effects, a different and often more durable compounding dynamic. Every conversation makes Cleo smarter about how to talk about money with the specific demographic it serves: Gen Z and millennials with irregular incomes, high financial anxiety, and deep distrust of traditional banks. The training data from 7M users having daily financial conversations is proprietary and cannot be replicated by a competitor starting today. As Cleo expands into credit, savings products, and bill negotiation, each new financial product generates more behavioral signal, which improves the AI, which attracts more users, which generates more signal. This is the same data flywheel that made Google Search defensible: the model gets better as it gets bigger, and getting bigger requires being better first.",
+      "whyNow": "Three forces converged simultaneously. First, generative AI made conversational financial guidance genuinely useful rather than a novelty, Cleo's AI can now give contextual, personalized advice that was impossible two years ago. Second, the 2022 to 2024 cost-of-living crisis created tens of millions of first-time budgeters who needed help and actively distrusted banks. Third, the CFPB's open banking rules under Section 1033 are compelling banks to share transaction data with third parties, which expands what Cleo can see and therefore what it can advise on. The regulatory tailwind is new and structural, not a temporary window.",
+      "tam": "$100B",
+      "tamNote": "The US personal financial advisory market is $58B and growing at 5% per year. Cleo's addressable market expands significantly if it captures even a fraction of the credit, insurance, and banking switching behavior of its 7M users. The broader financial wellness software market, including budgeting, savings, and debt management tools, is projected at $100B globally by 2027.",
+      "risks": [
+        "Large banks are building AI financial assistants and have significant distribution and data advantages",
+        "Regulatory risk around AI-generated financial advice and potential CFPB enforcement",
+        "The humor and irreverence that drives engagement with Gen Z could conflict with fiduciary responsibility as Cleo scales into regulated products"
+      ],
+      "riskMitigation": "The bank competition risk is real but historically banks build features that underserved customers ignore. Chase and Wells Fargo have offered digital budgeting tools for a decade with near-zero engagement from the same demographic Cleo serves. Cleo's personality is not a marketing strategy, it is a genuine product differentiator that institutional banks cannot copy without destroying their own brand positioning. The regulatory risk is manageable as long as Cleo frames output as information rather than advice, a distinction the product already navigates carefully."
+    },
+    {
+      "id": "skool",
+      "company": "Skool",
+      "sector": "Creator Economy",
+      "sectorColor": "#F59E0B",
+      "thesis": "A course and community marketplace with two-sided network effects that drive creator lock-in and student retention far beyond any competing platform.",
+      "stage": "Profitable",
+      "raised": "$200M+ ARR",
+      "recommendation": "Monitor",
+      "recommendationRationale": "Skool is a genuinely differentiated business with the right network architecture, but at $200M ARR and profitable, the entry price likely exceeds the return threshold for a USV-style fund. Watch for a secondaries opportunity or a strategic need for growth capital that creates a favorable entry point.",
+      "investors": "Alex Hormozi (public advocate), largely bootstrapped",
+      "founded": 2019,
+      "founders": "Sam Ovens",
+      "metrics": "$200M+ ARR, profitable, thousands of paid communities",
+      "networkEffects": "Skool has figured out what Teachable and Kajabi missed: learning is fundamentally social, not transactional. Every course on Skool has a built-in community forum with gamification, leaderboards, and direct messaging between students. This creates completion rates and retention that pure LMS platforms cannot match because it makes finishing a course a social act, not a solo discipline problem. The creator side also benefits from network effects: as Skool builds a reputation for higher completion rates and stronger student outcomes, top creators migrate from competitors, which attracts more students, which attracts more creators. This is the same classic marketplace flywheel that USV backed in Etsy and Kickstarter. The longer Skool runs, the more the top creators concentrate on the platform, and the harder it becomes to move your community off of it.",
+      "whyNow": "The creator economy has matured past the newsletter and cohort-course phase into an era of sustained community businesses. Creators who built email lists in 2018 to 2020 are now converting them into recurring community subscriptions, and they need infrastructure that handles both the content and the community in one place. Skool is purpose-built for this transition. The AI tutoring layer currently in development could make Skool the first platform where community reinforcement and personalized instruction compound each other at scale, a product surface that does not yet exist.",
+      "tam": "$50B",
+      "tamNote": "Global e-learning market projected at $457B by 2026 according to Global Market Insights. Skool's addressable share is the creator-led online education and community subscription segment, conservatively estimated at $50B and growing faster than the broader market as professional creators replace traditional course publishers.",
+      "risks": [
+        "At $200M ARR and profitable, the valuation floor is high and a fund-returning entry may not be achievable at current scale",
+        "Circle.so, Mighty Networks, and Kajabi are all racing to add community features to their course infrastructure",
+        "Sam Ovens' personal brand is deeply tied to Skool's identity and marketing, representing significant key-person concentration risk"
+      ],
+      "riskMitigation": "The monitor call is about price, not product conviction. Skool is a well-run, profitable business with genuine differentiation and a network architecture that competitors have not cracked. The question for USV is whether there is a scenario where they can own a meaningful stake at a price that generates a fund-returning outcome from a base of $200M ARR. A secondaries opportunity from an early employee or investor, or a strategic need for capital to accelerate the AI tutoring buildout, could change the entry math significantly."
+    }
+  ]
+}

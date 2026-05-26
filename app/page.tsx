@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FounderTable from "../components/FounderTable";
 import AboutSection from "../components/AboutSection";
+import InvestmentPitches from "../components/InvestmentPitches";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,6 +27,7 @@ const NAV_LINKS = [
   { id: "graph", label: "Network Map" },
   { id: "founders", label: "Founders" },
   { id: "about", label: "About" },
+  { id: "pitches", label: "Pitches" },
 ];
 
 const STATS = [
@@ -47,6 +49,7 @@ export default function Home() {
   const graphSectionRef = useRef<HTMLElement>(null);
   const foundersSectionRef = useRef<HTMLElement>(null);
   const aboutSectionRef = useRef<HTMLElement>(null);
+  const pitchesSectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -134,6 +137,25 @@ export default function Home() {
             toggleActions: "play none none none",
           },
         });
+      }
+
+      // Investment Pitches section: header reveals, then cards handled inside component
+      if (pitchesSectionRef.current) {
+        const header = pitchesSectionRef.current.querySelector(".section-header");
+        if (header) {
+          gsap.set(header, { opacity: 0, y: 36 });
+          gsap.to(header, {
+            opacity: 1,
+            y: 0,
+            duration: 0.75,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: header,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+          });
+        }
       }
     });
 
@@ -320,12 +342,34 @@ export default function Home() {
       </section>
 
       {/* Section 3: About */}
-      <section id="about" ref={aboutSectionRef} className="px-4 md:px-8 pb-28">
+      <section id="about" ref={aboutSectionRef} className="px-4 md:px-8 mb-20">
         <div className="section-header mb-6">
           <p className="text-[11px] uppercase tracking-widest text-[#C9A84C] mb-1">Section 03</p>
           <h2 className="text-2xl font-bold text-white">About This Project</h2>
         </div>
         <AboutSection />
+      </section>
+
+      {/* Section 4: Investment Pitches */}
+      <section id="pitches" ref={pitchesSectionRef} className="px-4 md:px-8 pb-28">
+        <div className="section-header mb-3">
+          <p className="text-[11px] uppercase tracking-widest text-[#C9A84C] mb-1">Section 04</p>
+          <h2 className="text-2xl font-bold text-white">Investment Pitches</h2>
+          <p className="text-gray-400 text-sm mt-1 max-w-2xl leading-relaxed">
+            Four original investment memos on companies USV has not yet backed that fit the thesis of trusted networks broadening access to knowledge, capital, or well-being. Each memo argues the network effects case, the why now, and a recommendation. Click any card to expand the full memo.
+          </p>
+        </div>
+
+        {/* Disclaimer */}
+        <div className="mb-8 flex items-start gap-2.5 rounded-xl border border-[#C9A84C]/20 px-4 py-3 max-w-2xl"
+          style={{ background: "rgba(201,168,76,0.04)" }}>
+          <span className="text-[#C9A84C] text-xs mt-0.5 flex-shrink-0">Note</span>
+          <p className="text-gray-500 text-xs leading-relaxed">
+            These memos represent original analysis by Sahil Modi as part of his USV Analyst Program application. They are not affiliated with or endorsed by Union Square Ventures. All data from public sources as of May 2026.
+          </p>
+        </div>
+
+        <InvestmentPitches />
       </section>
 
       <footer className="border-t border-white/10 px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
